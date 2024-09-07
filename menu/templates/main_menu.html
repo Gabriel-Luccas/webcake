@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'menu/base.css' %}" />
+</head>
+<body>
+    {% block content %}
+    <h1>Menu</h1>
+
+    {% for cake in query_cakes %}
+        <div>
+            <h2>{{ cake.name }}</h2>
+            <p>Price: ${{ cake.price }}</p>
+            {% if cake.image %}
+                <img src="{{ cake.image.url }}" alt="{{ cake.name }}" width="200">
+            {% else %}
+                <p>No image available.</p>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>No cakes available.</p>
+    {% endfor %}
+
+    <p>Total Cakes: {{ query_cakes.count }}</p>
+    {% endblock %}
+</body>
+</html>
