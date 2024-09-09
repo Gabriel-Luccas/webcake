@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'menu/base.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'menu/home.css' %}"
+    />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Cakes and Sweeties</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -25,14 +32,34 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link disabled" aria-disabled="true">Location</a>
           </div>
         </div>
       </div>
     </nav>
-    {% block content %} {% endblock %}
+
+    <main id="main">
+      <section class="main-set">
+        <div>
+          <p>peça online</p>
+          <p>doçes maravilhosos</p>
+          <button>veja agora</button>
+        </div>
+        <div class="logo">
+          <img src="" alt="logo" />
+        </div>
+      </section>
+
+      <section class='menu=tag'>
+        <p>menu com filtro?</p>
+      </section>
+
+      <section class='about-aet'>
+        <p>about us</p>
+      </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

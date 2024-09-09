@@ -22,7 +22,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('menu.urls')),  # Incluindo URLs do seu app "menu"
+    path('menu/', include('menu.urls')),  # Incluindo URLs do seu app "menu"pa
+    path('' , include('homepage.urls'))
 ]
 
 # Adicione a configuração de arquivos de mídia apenas no desenvolvimento

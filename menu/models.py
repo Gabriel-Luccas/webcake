@@ -7,6 +7,7 @@ class Cake(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)  # Adicione max_digits
     image = models.ImageField(upload_to='cakes/', blank=True, null=True)  # Campo para a imagem
+    falovor = models.TextField(max_length=100, blank=True, null=True)
 
     def __str__(self):
         return self.name
