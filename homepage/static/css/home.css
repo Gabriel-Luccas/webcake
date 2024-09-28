@@ -1,96 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
-/*  font-family: "Playwrite CU", cursive; */
+/* Tabela de cores personalizadas
+   cor principal: #F5B0AB (rosa suave)
+   secundárias: #FF00FF (rosa vibrante), #42033D (purble escuro)
+   branco: #FFFFFF
+*/
 
 /* Geral */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Pacifico", cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: 400;
+  background-color: #ffffff; /* Fundo branco */
+  color: #42033d; /* Texto purble escuro para contraste */
 }
 
 nav {
-  background-color: #f8f9fa; /* Cor de fundo clara */
   padding: 10px;
-  border-bottom: 2px solid black;
+  text-align: center;
 }
 
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #42033d; /* Texto branco */
+}
+
+.brand_name {
+  font-family: "Pacifico", cursive;
+  color: #42033d; /* Texto branco */
 }
 
 .navbar-nav a {
   margin-right: 15px;
   font-size: 1.1rem;
+  color: #42033d; /* Texto branco */
 }
 
-/* Alinhamento do conteúdo principal */
+.navbar-nav a:hover {
+  color: #ff00ff; /* Hover rosa vibrante */
+}
+
+#home_btn:hover {
+  color: #ff00ff;
+}
+
+#location:hover {
+  color: #ff00ff;
+  cursor: pointer;
+}
+
 .main-set {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   padding: 20px;
   margin-top: 30px;
-  border: 1px solid black;
+  background-color: #f5b0ab; /* Fundo rosa suave */
 }
 
 .main-set div {
   flex: 1;
   text-align: center;
-  border: 1px solid black;
 }
 
 .main-set p {
   font-size: 1.5rem;
   margin: 10px 0;
+  color: #42033d; /* Texto purble escuro */
 }
 
 .main-set button {
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
+  background-color: #ff00ff; /* Botão rosa vibrante */
+  color: #42033d; /* Texto branco */
+  border: none;
+}
+
+.main-set button:hover {
+  background-color: #f5b0ab; /* Hover rosa suave */
+  color: #42033d; /* Texto purble escuro */
 }
 
 .logo img {
-  max-width: 100%;
+  width: 60%;
   height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 50%;
 }
 
-/* Menu e About us Sections */
-.menu-tag, .about-aet {
+.div_order_online {
+  background-color: #fde8e7; /* Fundo branco para destacar */
+  padding: 20px;
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.div_order_online:hover {
+  transform: scale(1.03); /* Expande levemente no hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.div_order_online p {
+  color: #42033D; /* Texto purble escuro para contraste */
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.div_order_online h3 {
+  color: #f5b0ab; /* Texto rosa suave */
+  font-family: "Playwrite CU", cursive;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+px;
+}
+
+.menu-tag,
+.about-aet {
   text-align: center;
   padding: 50px 20px;
   font-size: 1.4rem;
+  background-color: #ffffff; /* Fundo branco */
+  color: #42033d; /* Texto purble */
 }
 
-.menu-tag {
-  border-top: 1px solid #ddd;
+#btn-pink {
+  background-color: #ff00ff; /* Botão rosa vibrante */
+  color: #ffffff; /* Texto branco */
 }
 
-.about-aet {
-  border-top: 1px solid #ddd;
-}
-
-.div_order_online >  p{
-  color: black;
-}
-
-.div_order_online >  p{
-  color: rgba(0, 0, 0, 0.403);
-}
-
-.div_order_online >  h3{
-  color: black;
-  font-family: "Playwrite CU", cursive;
-}
-
-
-
-#btn-pink{
-  background-color: pink;
+#btn-pink:hover {
+  background-color: #f5b0ab; /* Hover rosa suave */
+  color: #42033d; /* Texto purble escuro */
 }
 
 /* Layout responsivo */
