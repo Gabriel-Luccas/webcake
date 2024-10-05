@@ -7,6 +7,7 @@
 /* Geral */
 body {
   font-family: "Pacifico", cursive;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -106,7 +107,7 @@ nav {
 }
 
 .div_order_online p {
-  color: #42033D; /* Texto purble escuro para contraste */
+  color: #42033d; /* Texto purble escuro para contraste */
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
@@ -116,8 +117,6 @@ nav {
   font-family: "Playwrite CU", cursive;
   font-size: 2rem;
   margin-bottom: 15px;
-}
-px;
 }
 
 .menu-tag,
@@ -137,6 +136,58 @@ px;
 #btn-pink:hover {
   background-color: #f5b0ab; /* Hover rosa suave */
   color: #42033d; /* Texto purble escuro */
+}
+
+/* Carousel */
+
+.menu-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 1200px;
+  position: relative;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.wrapper i:first-child {
+  left: -25px;
+}
+
+.wrapper i:first-child {
+  right: -25px;
+}
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel img {
+  height: 320px;
+  object-fit: cover;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+
+.carousel img:first-child {
+  margin-left: 0px;
 }
 
 /* Layout responsivo */
