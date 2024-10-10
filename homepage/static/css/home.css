@@ -24,18 +24,18 @@ nav {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #42033d; /* Texto branco */
+  color: #42033d; /* Texto purble escuro */
 }
 
 .brand_name {
   font-family: "Pacifico", cursive;
-  color: #42033d; /* Texto branco */
+  color: #42033d; /* Texto purble escuro */
 }
 
 .navbar-nav a {
   margin-right: 15px;
   font-size: 1.1rem;
-  color: #42033d; /* Texto branco */
+  color: #42033d; /* Texto purble escuro */
 }
 
 .navbar-nav a:hover {
@@ -76,7 +76,7 @@ nav {
   font-size: 1.2rem;
   cursor: pointer;
   background-color: #ff00ff; /* Botão rosa vibrante */
-  color: #42033d; /* Texto branco */
+  color: #42033d; /* Texto purble escuro */
   border: none;
 }
 
@@ -139,15 +139,17 @@ nav {
 }
 
 /* Carousel */
-
 .menu-tag {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* General Wrapper Style */
 .wrapper {
   max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
   position: relative;
 }
 
@@ -168,29 +170,57 @@ nav {
   left: -25px;
 }
 
-.wrapper i:first-child {
+.wrapper i:last-child {
   right: -25px;
 }
 
-.wrapper .carousel {
+/* Carousel Style */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 0px;
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
+  gap: 14px;
 }
 
+/* Image Container for dragging functionality */
+.image-container {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.4s ease;
+  cursor: grab; /* Indica que é arrastável */
+}
+
+.image-container:active {
+  cursor: grabbing; /* Muda o cursor quando arrastando */
+}
+
+/* Image Styles */
 .carousel img {
   height: 320px;
   object-fit: cover;
-  margin-left: 14px;
-  width: calc(100% / 3);
+  width: 300px;
 }
 
 .carousel img:first-child {
   margin-left: 0px;
 }
 
-/* Layout responsivo */
+/* General Icon Styling */
+.material-symbols-outlined {
+  cursor: pointer;
+  font-size: 36px;
+}
+
+.prev,
+.next {
+  user-select: none;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .main-set {
     flex-direction: column;
@@ -212,13 +242,14 @@ nav {
   }
 }
 
-@media screen and(max-width: 900px) {
+/* Corrected media query */
+@media screen and (max-width: 900px) {
   .carousel img {
     width: calc(100% / 2);
   }
 }
 
-@media screen and(max-width: 550px) {
+@media screen and (max-width: 550px) {
   .carousel img {
     width: 100%;
   }
